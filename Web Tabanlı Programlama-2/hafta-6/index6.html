@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 0;
+        let resimler = ["images/resim1.jpeg", "images/resim2.jpeg"];
+        function sonrakiResim() {
+            i++;
+            if (i == resimler.length) {
+                i = 0;
+            }
+            let resimElementi = document.getElementById("resim");
+            resimElementi.src = resimler[i];
+        }
+
+        function oncekiResim() {
+            i--;
+            if (i == - 1) {
+                i = resimler.length - 1;
+            }
+            let resimElementi = document.getElementsById("resim");
+            resimElementi.src = resimler[i];
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/resim1.jpeg" id="resim"><br>
+    <button onclick="oncekiResim()">Önceki Resim</button>
+    <button onclick="sonrakiResim()">Sonraki Resim</button>
+</body>
+
+</html>

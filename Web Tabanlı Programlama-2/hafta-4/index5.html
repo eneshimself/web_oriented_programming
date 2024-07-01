@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tabloOlustur()
+        {
+            let satir = document.getElementById("satir").value;
+            let sutun = document.getElementById("sutun").value;
+            document.write("<table border='1'>");
+            for (let i = 1; i <= satir; i++)
+            {
+                document.write("<tr>");
+                    for (let j = 1; j <= sutun; j++)
+                    {
+                        document.write("<td>" + j + "</td>");
+                    }
+                    document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Satır Sayısı: <input type="text" value="0" id="satir">
+    </p>
+    <p>
+        Sütun Sayısı: <input type="text" value="0" id="sutun">
+    </p>
+    <button onclick="tabloOlustur()">Tablo Çiz</button>
+</body>
+</html>

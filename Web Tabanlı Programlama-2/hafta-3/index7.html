@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 1;
+        function resimDegistir(){
+            let resim = document.getElementById("resim");
+            if(a == 1){
+                resim.src = "images/resim1.jpeg";
+                a*=-1;
+            }
+            else {
+                resim.src = "images/resim2.jpeg";
+                a*=-1;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <img id="resim" src="images/resim1.jpeg" >
+    <button onclick="resimDegistir()">TIKLA</button>
+</body>
+</html>

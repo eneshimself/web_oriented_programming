@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kontrolEt() {
+            let isim = document.forms["myForm"]["isim"].value;
+            let yas = document.forms["myForm"]["yas"].value;
+            if ((isim != "") && (yas > 18) && (yas < 55)) 
+            {
+                return true;
+            }
+            else 
+            {
+                if (isim == "")
+                {
+                let elementmesaj1 = document.getElementById("isimmesaji");
+                elementmesaj1.innerHTML = "İsim girmeden devam edmezsiniz!";
+                elementmesaj1.style.color = "red";
+                elementmesaj1.style.fontWeight = "bolder";
+                elementmesaj1.style.backgroundColor = "gray";
+                return false;
+                }
+                if ((yas < 18) || (yas > 55)) 
+                {
+                    let elementmesaj1 = document.getElementById("yasmesaji");
+                    elementmesaj2.innerHTML = "Yaş girmeden devam edmezsiniz!";
+                    elementmesaj2.style.color = "red";
+                    elementmesaj2.style.fontWeight = "bolder";
+                    elementmesaj2.style.backgroundColor = "gray";
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="islem.html" onsubmit="return kontrolEt()">
+        <p>
+            <label for="isim">İsminizi Giriniz:</label>
+            <input for="text" name="isim" id="isim">
+            <span id="isimmesaji"></span>
+        </p>
+        <p>
+            <label for="yas">Yaşınızı Giriniz:</label>
+            <input type="number" min="0" max="150">
+            <span id="yasmesaji"></span>
+        </p>
+        <p>
+            <input type="submit" value="Gönder">
+        </p>
+    </form>
+</body>
+
+</html>

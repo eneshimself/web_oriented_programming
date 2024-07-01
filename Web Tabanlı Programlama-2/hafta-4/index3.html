@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function renkDegistir()
+        {
+            let renk = document.getElementById("renk").value;
+            document.getElementById("yazi").style.backgroundColor=renk;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <input type="color" id="renk">
+    </p>
+    <div id="yazi">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde, esse repellat qui animi, quae fugiat
+        dolorem, quaerat odio aliquid sequi quas fuga quam necessitatibus numquam totam magnam. Ipsum,
+    </div>
+    <button onclick="renkDegistir()">Renk Değiştir</button>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 3;
+        function yeniElementEkle()
+        {
+            let yenip = document.createElement("p");
+            let yeniyazi = document.createTextNode(i + ". Paragraf");
+            i++;
+            yenip.appendChild(yeniyazi);
+
+            let parentElement = document.getElementById("main");
+            parentElement.appendChild(yenip);
+        }
+        function sil()
+        {
+            let parentElement = document.getElementById("main");
+            parentElement.removeChild(parentElement.lastChild);
+            i--;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <p id="ilkP">
+            1. Paragraf
+        </p>
+        <p id="ikinciP">
+            2. Paragraf
+        </p>
+    </div>
+    <button onclick="yeniElementEkle()">Ekle</button>
+    <button onclick="sil()">Sil</button>
+</body>
+
+</html>

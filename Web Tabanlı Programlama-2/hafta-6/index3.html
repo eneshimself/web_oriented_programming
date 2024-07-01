@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let students = ["Çiçek", "Ulaş", "Ceren", "Murat", "Erkin"];
+        document.write("Push öncesi:<br>");
+        students.forEach(students => {
+            document.write(student + "<br>");
+        });
+        
+        students.push("Tayfun");
+        
+        document.write("Push sonrası elemean sayısı:" + students.length + "<br>");
+        students.forEach(student => {
+            document.write(student + "<br>");
+        });
+
+        students.shift();
+
+        document.write("Shift sonrası eleman sayısı:" + students.length + "<br>");
+        students.forEach(student => {
+            document.write(student + "<br>");
+        });
+
+        students.sort();
+
+        document.write("<br>");
+        document.write("Sort sonrası eleman sayısı:" + students.length + "<br>");
+        students.forEach(student => {
+            document.write(student + "<br>");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

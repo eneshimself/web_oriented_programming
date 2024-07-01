@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function islemler()
+        {
+            let metin = document.getElementById("metin").value;
+            //document.getElementById("sonuc").innerHTML = metin.lengt;
+            //document.getElementById("sonuc").innerHTML = metin.charAt(3);
+            //document.getElementById("sonuc").innerHTML = metin.charcodeAt(3);
+            //document.getElementById("sonuc").innerHTML = metin.at(-3);
+            //document.getElementById("sonuc").innerHTML = metin.slice(2,5);
+            //document.getElementById("sonuc").innerHTML = metin.toUpperCase();
+            //document.getElementById("sonuc").innerHTML = metin.toLowerCase();
+            document.getElementById("sonuc").innerHTML = metin.replaceAll("a","c");
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <label for="metin">Metin Giriniz:</label>
+        <input type="text" id="metin">
+    </p>
+    <p>
+        <button onclick="islemler()">TIKLA</button>
+    </p>
+</body>
+</html>

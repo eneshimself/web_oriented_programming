@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function buyukHarfeCevir()
+        {
+            let element = document.getElementById("metin");
+            element.value = element.value.toUpperCase();
+            element.value = element.value.replaceAll("Ş","S");
+            element.value = element.value.replaceAll("Ğ","G");
+            element.value = element.value.replaceAll("Ü","U");
+            element.value = element.value.replaceAll("Ö","O");
+            element.value = element.value.replaceAll("Ç","C");
+        }
+    </script>
+</head>
+<body>
+    <label for="metin">Metin Giriniz:</label>
+    <input type="text" id="metin" oninput="buyukHarfeCevir()">
+</body>
+</html>
